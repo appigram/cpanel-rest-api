@@ -1,17 +1,23 @@
 {
-  "author": "Valentin-Costel Hăloiu <vially.ichb@gmail.com>",
-  "name": "cpanel-lib",
-  "description": "Node.js library for the cPanel/WHM API",
-  "version": "0.0.5",
-  "homepage": "https://github.com/vially/cpanel-lib",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:vially/cpanel-lib.git"
-  },
-  "main": "lib/cpanel",
-  "license": "MIT",
-  "dependencies": {
-    "qs": ">= 0.3.2"
-  },
-  "devDependencies": {}
+    "author": "Valentin-Costel Hăloiu <vially.ichb@gmail.com>",
+    "name": "cpanel-lib",
+    "description": "Node.js library for the cPanel/WHM API",
+    "version": "0.1.0",
+    "homepage": "https://github.com/vially/cpanel-lib",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:vially/cpanel-lib.git"
+    },
+    "main": "src",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.19.0",
+        "lodash": "^4.17.15"
+    },
+    "devDependencies": {
+        "eslint": "^6.1.0",
+        "eslint-config-prettier": "^6.0.0",
+        "eslint-plugin-prettier": "^3.1.0",
+        "prettier": "^1.18.2"
+    }
 }
