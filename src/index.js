@@ -1,3 +1,9 @@
 'use strict';
 
-module.exports = require('./cpanel');
+const UAPI = require('./UAPI');
+const WHM = require('./WHM');
+
+module.exports = {
+    UAPI,
+    WHM
+};

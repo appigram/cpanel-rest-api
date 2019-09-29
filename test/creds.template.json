@@ -1,0 +1,12 @@
+{
+    "WHM": {
+        "host": "server.example.com",
+        "username": "root",
+        "accessKey": "ACCESS_KEY"
+    },
+    "UAPI": {
+        "host": "server.example.com",
+        "username": "USERNAME",
+        "password": "PASSWORD"
+    }
+}
