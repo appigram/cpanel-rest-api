@@ -1,5 +1,6 @@
 'use strict';
 
+const _ = require('lodash');
 const BaseRequest = require('./BaseRequest');
 
 class UAPI extends BaseRequest {
@@ -7,10 +8,23 @@ class UAPI extends BaseRequest {
         super({ port: 2083, auth: getBasicAuth(opts), ...opts });
     }
 
-    async api(mod, func, params, opts) {
+    /**
+     *
+     * @param {object} opts
+     * @param {string} opts.module
+     * @param {string} opts.func
+     * @param {{ [key: string]: string; }} opts.params
+     */
+    async api(opts) {
+        if (_.isPlainObject(opts)) {
+            throw new Error('opts needs to be an object');
+        }
+
+        const { module, func, params } = opts;
+
         const res = await this._request({
-            ...opts,
-            path: ['execute', mod, func],
+            ...opts.opts,
+            path: ['execute', module, func],
             params
         });
 

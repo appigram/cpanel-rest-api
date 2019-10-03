@@ -1,13 +1,12 @@
-[![build status](https://secure.travis-ci.org/vially/cpanel-lib.png)](http://travis-ci.org/vially/cpanel-lib)
 Node.js library for the cPanel/WHM API
 =====
 
 ## Instalation
-    $ npm install cpanel-lib
+    $ npm install cpanel-rest-api
 
-## Usage
+## WHM Usage
 ```js
-var { WHM } = require('cpanel-lib');
+var { WHM } = require('cpanel-rest-api');
 
 const whm = new WHM({
     host: 'whm.example.com',
@@ -21,16 +20,17 @@ whm
         console.log('WHM Version: %j', version);
     });
 
+// or
 whm
-    .api('listaccts')
+    .api({ action: 'listaccts' })
     .then(res => {
         console.log('Result: %j', res);
     });
 
 whm
-    .uapi
-    .api('Email', 'list_forwarders', 'user')
-    .then(forwarders => {
-        console.log(forwarders);
+    .uapi('user')
+    .api({ module: 'Email', func: 'list_pops' })
+    .then(emails => {
+        console.log(emails);
     });
 ```

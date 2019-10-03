@@ -11,14 +11,14 @@ async function whmTest() {
     const accts = (await whm.api('listaccts')).acct;
 
     if (accts.length > 0) {
-        const forwarders = await whm.uapi.api(
-            'Email',
-            'list_forwarders',
-            accts[0].user
-        );
+        const uapi = whm.uapi(accts[0].user);
+        const emails = await uapi.api({
+            module: 'Email',
+            func: 'list_pops'
+        });
 
-        console.log(forwarders);
+        console.log(emails);
     }
 }
 
-whmTest();
+whmTest().catch(console.error);

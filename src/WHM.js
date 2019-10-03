@@ -1,20 +1,24 @@
 'use strict';
 
+const _ = require('lodash');
 const BaseRequest = require('./BaseRequest');
 const UapiWhm = require('./UapiWhm');
 
 class WHM extends BaseRequest {
     constructor(opts) {
         super({ port: 2087, auth: getWhmAuth(opts), ...opts });
-
-        this._uapi = new UapiWhm(this);
     }
 
-    get uapi() {
-        return this._uapi;
+    uapi(user) {
+        return new UapiWhm(this, user);
     }
 
-    async api(action, params, opts) {
+    async api(options) {
+        options = options || {};
+        const action = _.isString(options) ? options : options.action;
+
+        const { params, opts } = options;
+
         const res = await this._request({
             ...opts,
             path: ['json-api', action],

@@ -1,4 +1,4 @@
 'use strict';
 
-// require('./whmTest');
-require('./uapiTest');
+require('./whmTest');
+// require('./uapiTest');
