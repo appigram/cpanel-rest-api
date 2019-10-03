@@ -2,13 +2,13 @@
     "name": "cpanel-rest-api",
     "description": "Node.js library for the cPanel/WHM API",
     "version": "0.1.1",
-    "homepage": "https://github.com/claude-abounegm/cpanel-lib",
+    "homepage": "https://github.com/claude-abounegm/cpanel-rest-api",
     "scripts": {
         "test": "node test"
     },
     "repository": {
         "type": "git",
-        "url": "git@github.com:claude-abounegm/cpanel-lib.git"
+        "url": "git@github.com:claude-abounegm/cpanel-rest-api.git"
     },
     "main": "src",
     "license": "MIT",
