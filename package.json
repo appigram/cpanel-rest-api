@@ -1,27 +1,27 @@
 {
-    "name": "cpanel-rest-api",
-    "description": "Node.js library for the cPanel/WHM API",
-    "version": "0.1.2",
-    "homepage": "https://github.com/claude-abounegm/cpanel-rest-api",
-    "scripts": {
-        "test": "node test"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:claude-abounegm/cpanel-rest-api.git"
-    },
-    "main": "src",
-    "license": "MIT",
-    "author": "Claude Abounegm",
-    "dependencies": {
-        "axios": "^0.21.0",
-        "builder-url": "^1.0.3",
-        "lodash": "^4.17.20"
-    },
-    "devDependencies": {
-        "eslint": "^7.14.0",
-        "eslint-config-prettier": "^6.15.0",
-        "eslint-plugin-prettier": "^3.1.4",
-        "prettier": "^2.2.1"
-    }
+  "name": "@appigram/cpanel-rest-api",
+  "description": "Node.js library for the cPanel/WHM API",
+  "version": "0.1.2",
+  "homepage": "https://github.com/appigram/cpanel-rest-api",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:appigram/cpanel-rest-api.git"
+  },
+  "main": "src",
+  "license": "MIT",
+  "author": "Evgeny Sysmanov",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "builder-url": "^1.0.3",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.2.1"
+  }
 }
